@@ -117,5 +117,21 @@ insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('W
 insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('DANIEL WEBSTER', 1836, 41201, 2.7, 14);
 insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('JOHN BELL', 1860, 590901, 12.6, 39);
 insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('EUGENE V. DEBS', 1912, 900370, 6, 0);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('George Washington', 1789, 0, 0, 69);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('George Washington', 1792, 0, 0, 132);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('John Adams', 1796, 0, 0, 71);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('Thomas Jefferson', 1796, 0, 0, 68);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('Thomas Jefferson', 1800, 0, 0, 73);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('John Adams', 1800, 0, 0, 65);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('Thomas Jefferson', 1804, 0, 0, 162);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('Charles Pinckney', 1804, 0, 0, 14);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('James Madison', 1808, 0, 0, 122);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('Charles Pinckney', 1808, 0, 0, 47);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('James Madison', 1812, 0, 0, 128);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('Federalist', 1812, 0, 0, 89);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('James Monroe', 1816, 0, 0, 183);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('Rufus King', 1816, 0, 0, 34);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('James Monroe', 1820, 0, 0, 231);
+insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values ('John Quincy Adams', 1820, 0, 0, 1);
 
 select * from db.CANDIDATE;

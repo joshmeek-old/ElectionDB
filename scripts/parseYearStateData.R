@@ -39,9 +39,13 @@ for(i in 1:length(data_files)) {
   party <- data_files[[i]][2, ][1]
   popular <- data_files[[i]][length(data_files[[i]][, 1]), ][3]
   percentage <- data_files[[i]][length(data_files[[i]][, 1]), ][4]
-  electoral <- data_files[[i]][length(data_files[[i]][, 1]), ][5]
+  electoral <- data_files[[i]][length(data_files[[i]][, 1]), ][5]  
+  if(electoral == "") {
+    electoral <- "0"
+  }
+  popular <- gsub(",", "", popular)
   
-  query <- paste(query, name, ", ", years[i], ", ", popular, ", ", percentage, ", ", electoral, ");", sep='')
+  query <- paste(query, "'", name, "', ", years[i], ", ", popular, ", ", percentage, ", ", electoral, ");", sep='')
   
   write(query, file="~/Desktop/ElectionsDB_Data/populate_candidate.txt", append = TRUE)
 }
@@ -54,8 +58,12 @@ for(i in 1:length(data_files)) {
   popular <- data_files[[i]][length(data_files[[i]][, 1]), ][6]
   percentage <- data_files[[i]][length(data_files[[i]][, 1]), ][7]
   electoral <- data_files[[i]][length(data_files[[i]][, 1]), ][8]
+  if(electoral == "") {
+    electoral <- "0"
+  }
+  popular <- gsub(",", "", popular)
   
-  query <- paste(query, name, ", ", years[i], ", ", popular, ", ", percentage, ", ", electoral, ");", sep='')
+  query <- paste(query, "'", name, "', ", years[i], ", ", popular, ", ", percentage, ", ", electoral, ");", sep='')
 
   write(query, file="~/Desktop/ElectionsDB_Data/populate_candidate.txt", append = TRUE)
 }
@@ -71,8 +79,12 @@ for(i in 1:length(data_files)) {
   popular <- data_files[[i]][length(data_files[[i]][, 1]), ][9]
   percentage <- data_files[[i]][length(data_files[[i]][, 1]),][10]
   electoral <- data_files[[i]][length(data_files[[i]][, 1]), ][11]
+  if(electoral == "") {
+    electoral <- "0"
+  }
+  popular <- gsub(",", "", popular)
   
-  query <- paste(query, name, ", ", years[i], ", ", popular, ", ", percentage, ", ", electoral, ");", sep='')
+  query <- paste(query, "'", name, "', ", years[i], ", ", popular, ", ", percentage, ", ", electoral, ");", sep='')
   
   write(query, file="~/Desktop/ElectionsDB_Data/populate_candidate.txt", append = TRUE)
 }
@@ -88,15 +100,19 @@ for(i in 1:length(data_files)) {
   popular <- data_files[[i]][length(data_files[[i]][, 1]), ][12]
   percentage <- data_files[[i]][length(data_files[[i]][, 1]), ][13]
   electoral <- data_files[[i]][length(data_files[[i]][, 1]), ][14]
+  if(electoral == "") {
+    electoral <- "0"
+  }
+  popular <- gsub(",", "", popular)
   
-  query <- paste(query, name, ", ", years[i], ", ", popular, ", ", percentage, ", ", electoral, ");", sep='')
+  query <- paste(query, "'", name, "', ", years[i], ", ", popular, ", ", percentage, ", ", electoral, ");", sep='')
   
   write(query, file="~/Desktop/ElectionsDB_Data/populate_candidate.txt", append = TRUE)
 }
 
 #insert into db.CANDIDATE (Name, Year, Popular, Percentage, Electoral) values (Name, Year, Popular, Percentage, Electoral);
 
-data_files[[48]]
+
 
 
 

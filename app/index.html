@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ElectionDB">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ElectionDB</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/routes/main.route.js"></script>
+    <script src="app/main/main.controller.js"></script>
+    <script src="app/main/main.module.js"></script>
+</head>
+
+<body ng-controller="MainController">
+
+    <button class="btn btn-primary" ng-click="grab()">Update Time Series Data</button>
+
+    <!--<button class="btn btn-primary" ng-click="list()">List Time Series Data</button>
+    <button class="btn btn-primary" ng-click="deletets()">Delete Time Series Data</button>
+
+    <p></p>
+
+    <button class="btn btn-primary" ng-click="getavg()">Get Average</button>
+    <input type="text" ng-model="from"> to <input type="text" ng-model="to">
+    <p></p>
+    Average: <span ng-bind="avgResult"></span>
+    <p></p>
+    <span ng-bind="listedTS"></span>-->
+
+</body>
+
+</html>

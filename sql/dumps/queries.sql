@@ -45,18 +45,23 @@ from STATE
 where sName = 'Maryland'
 order by Year;
 
+# Vice president count per president
+select pName, count(*) as VPCount
+from VICE_PRESIDENT
+where vName != 'None'
+group by pName
+order by VPCount desc;
+
 #Faithless Elector Query
 select *
-from PRESIDENT p, RUNNING_M
+from PRESIDENT p, RUNNING_M;
 
 #Presidential Picture Query
 
 
 #Non-elected Query
-# check for the zeros in the VP table
 select Name, StartYear 
 from PRESIDENT 
 where StartYear % 4 != 0;
-
 
 

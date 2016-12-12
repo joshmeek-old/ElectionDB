@@ -12,7 +12,7 @@ angular.module('ElectionDB')
         $scope.resultsSQ = {};
         $scope.resultsFEQ = {};
         $scope.resultsNEQ = {};
-        $scope.resultsPPQ = {};
+        $scope.resultsPPQ = '';
 
         $scope.EYQ = function(year) {
 
@@ -61,25 +61,32 @@ angular.module('ElectionDB')
             });
         };
 
-        $scope.FEQ = function(year) {
-            mainRoute.FEQ(year).then(function(data) {
+        $scope.FEQ = function() {
+            mainRoute.FEQ().then(function(data) {
                 $scope.resultsFEQ = data.data;
                 console.log(data.data);
             });
         };
 
-        $scope.NEQ = function(year) {
-            mainRoute.NEQ(year).then(function(data) {
+        $scope.NEQ = function() {
+            mainRoute.NEQ().then(function(data) {
                 $scope.resultsNEQ = data.data;
                 console.log(data.data);
             });
         };
 
-        $scope.PPQ = function(year) {
-            mainRoute.PPQ(year).then(function(data) {
-                $scope.resultsPPQ = data.data;
-                console.log(data.data);
-            });
+        $scope.PPQ = function(name) {
+
+            if(!name) {
+                $scope.resultsPPQ = '';
+            }
+            else {
+                mainRoute.PPQ(name).then(function (data) {
+                    //bower_components/POTUS_pictures/Adams.jpg
+                    $scope.resultsPPQ = 'bower_components/POTUS_pictures/' + data.data[0].Picture + '.jpg';
+                    console.log(data.data[0].Picture);
+                });
+            }
         };
 
 

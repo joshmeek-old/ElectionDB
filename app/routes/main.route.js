@@ -85,8 +85,7 @@ app.factory('mainRoute', ['$http', function($http) {
         console.log("FEQ Route");
         return $http({
             url: 'http://localhost:5674/FEQ',
-            method: 'GET',
-            params: {year: year}
+            method: 'GET'
         }).success(function(data){
             return data;
         }).error(function(data, error){
@@ -94,12 +93,11 @@ app.factory('mainRoute', ['$http', function($http) {
         });
     }
 
-    function NEQ(year) {
+    function NEQ() {
         console.log("NEQ Route");
         return $http({
             url: 'http://localhost:5674/NEQ',
-            method: 'GET',
-            params: {year: year}
+            method: 'GET'
         }).success(function(data){
             return data;
         }).error(function(data, error){
@@ -107,12 +105,12 @@ app.factory('mainRoute', ['$http', function($http) {
         });
     }
 
-    function PPQ(year) {
+    function PPQ(name) {
         console.log("PPQ Route");
         return $http({
             url: 'http://localhost:5674/PPQ',
             method: 'GET',
-            params: {year: year}
+            params: {name: name}
         }).success(function(data){
             return data;
         }).error(function(data, error){

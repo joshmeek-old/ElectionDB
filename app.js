@@ -55,22 +55,22 @@ app.get('/SQ', function(req, res) {
 });
 
 app.get('/FEQ', function(req, res) {
-    console.log('FEQ: ' + req.query.year);
-    queries.FEQ(req.query.year, function(data) {
+    console.log('FEQ: ');
+    queries.FEQ(function(data) {
         res.send(data);
     })
 });
 
 app.get('/NEQ', function(req, res) {
-    console.log('NEQ: ' + req.query.year);
-    queries.NEQ(req.query.year, function(data) {
+    console.log('NEQ: ');
+    queries.NEQ(function(data) {
         res.send(data);
     })
 });
 
 app.get('/PPQ', function(req, res) {
-    console.log('PPQ: ' + req.query.year);
-    queries.PPQ(req.query.year, function(data) {
+    console.log('PPQ: ' + req.query.name);
+    queries.PPQ(req.query.name, function(data) {
         res.send(data);
     })
 });

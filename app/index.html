@@ -210,30 +210,19 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2>VP Count Query</h2>
-                <input type="text" name="FEQYear" ng-model="FEQYear">
-                <button class="btn btn-default" ng-click="FEQ(FEQYear)">Query</button>
+                <button class="btn btn-default" ng-click="FEQ()">Query</button>
             </div>
             <div class="col-lg-6">
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Party</th>
-                        <th>Year</th>
-                        <th>Percentage</th>
-                        <th>Popular</th>
-                        <th>Electoral</th>
-                        <th>Polling</th>
+                        <th>pName</th>
+                        <th>VPCount</th>
                     </tr>
                     </thead>
                     <tr ng-repeat="x in resultsFEQ">
-                        <td>{{x.Name}}</td>
-                        <td>{{x.Party}}</td>
-                        <td>{{x.Year}}</td>
-                        <td>{{x.Percentage}}</td>
-                        <td>{{x.Popular}}</td>
-                        <td>{{x.Electoral}}</td>
-                        <td>{{x.Polling}}</td>
+                        <td>{{x.pName}}</td>
+                        <td>{{x.VPCount}}</td>
                     </tr>
                 </table>
             </div>
@@ -242,32 +231,19 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2>Not-Elected Query</h2>
-                <input type="text" name="NEQYear" ng-model="NEQYear">
-                <button class="btn btn-default" ng-click="NEQ(NEQYear)">Query</button>
+                <button class="btn btn-default" ng-click="NEQ()">Query</button>
             </div>
             <div class="col-lg-6">
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Running Mate</th>
-                        <th>Year</th>
-                        <th>Party</th>
-                        <th>Percentage</th>
-                        <th>Popular</th>
-                        <th>Electoral</th>
-                        <th>Polling</th>
+                        <th>StartYear</th>
                     </tr>
                     </thead>
                     <tr ng-repeat="x in resultsNEQ">
                         <td>{{x.Name}}</td>
-                        <td>{{x.Running_Mate}}</td>
-                        <td>{{x.Year}}</td>
-                        <td>{{x.Party}}</td>
-                        <td>{{x.Percentage}}</td>
-                        <td>{{x.Popular}}</td>
-                        <td>{{x.Electoral}}</td>
-                        <td>{{x.Polling}}</td>
+                        <td>{{x.StartYear}}</td>
                     </tr>
                 </table>
             </div>
@@ -276,47 +252,18 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2>Presidential Picture Query</h2>
-                <input type="text" name="PPQYear" ng-model="PPQYear">
-                <button class="btn btn-default" ng-click="PPQ(PPQYear)">Query</button>
+                <input type="text" name="PPQName" ng-model="PPQName">
+                <button class="btn btn-default" ng-click="PPQ(PPQName)">Query</button>
             </div>
-            <div class="col-lg-6">
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Party</th>
-                        <th>Year</th>
-                        <th>Percentage</th>
-                        <th>Popular</th>
-                        <th>Electoral</th>
-                        <th>Polling</th>
-                    </tr>
-                    </thead>
-                    <tr ng-repeat="x in resultsPPQ">
-                        <td>{{x.Name}}</td>
-                        <td>{{x.Party}}</td>
-                        <td>{{x.Year}}</td>
-                        <td>{{x.Percentage}}</td>
-                        <td>{{x.Popular}}</td>
-                        <td>{{x.Electoral}}</td>
-                        <td>{{x.Polling}}</td>
-                    </tr>
-                </table>
+            <div class="col-lg-6" style="display:table-cell; vertical-align:middle; text-align:center">
+                <img ng-src="{{resultsPPQ}}"/>
             </div>
         </div>
     </div>
-
-    <!--<button class="btn btn-primary" ng-click="list()">List Time Series Data</button>
-    <button class="btn btn-primary" ng-click="deletets()">Delete Time Series Data</button>
-
-    <p></p>
-
-    <button class="btn btn-primary" ng-click="getavg()">Get Average</button>
-    <input type="text" ng-model="from"> to <input type="text" ng-model="to">
-    <p></p>
-    Average: <span ng-bind="avgResult"></span>
-    <p></p>
-    <span ng-bind="listedTS"></span>-->
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
 
 </body>
 

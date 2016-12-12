@@ -62,27 +62,27 @@ function SQ(state, callback) {
 
 }
 
-function FEQ(year, callback) {
+function FEQ(callback) {
 
-    connection.query('select * from CANDIDATE where Year = ' + year + ';', function(err, rows) {
+    connection.query("select pName, count(*) as VPCount from VICE_PRESIDENT where vName != 'None' group by pName order by VPCount desc;", function(err, rows) {
         if(err) throw err;
         callback(rows);
     });
 
 }
 
-function NEQ(year, callback) {
+function NEQ(callback) {
 
-    connection.query('select * from CANDIDATE where Year = ' + year + ';', function(err, rows) {
+    connection.query('select Name, StartYear from PRESIDENT where StartYear % 4 != 0;', function(err, rows) {
         if(err) throw err;
         callback(rows);
     });
 
 }
 
-function PPQ(year, callback) {
+function PPQ(name, callback) {
 
-    connection.query('select * from CANDIDATE where Year = ' + year + ';', function(err, rows) {
+    connection.query('select distinct(Picture) from PRESIDENT where Name = "' + name + '";', function(err, rows) {
         if(err) throw err;
         callback(rows);
     });
@@ -120,18 +120,18 @@ module.exports = {
             callback(results);
         })
     },
-    FEQ: function(year, callback) {
-        FEQ(year, function(results) {
+    FEQ: function(callback) {
+        FEQ(function(results) {
             callback(results);
         })
     },
-    NEQ: function(year, callback) {
-        NEQ(year, function(results) {
+    NEQ: function(callback) {
+        NEQ(function(results) {
             callback(results);
         })
     },
-    PPQ: function(year, callback) {
-        PPQ(year, function(results) {
+    PPQ: function(name, callback) {
+        PPQ(name, function(results) {
             callback(results);
         })
     }

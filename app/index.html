@@ -96,30 +96,21 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2>Non-contiguous Election Query</h2>
-                <input type="text" name="NCEQYear" ng-model="NCEQYear">
-                <button class="btn btn-default" ng-click="NCEQ(NCEQYear)">Query</button>
+                <button class="btn btn-default" ng-click="NCEQ()">Query</button>
             </div>
             <div class="col-lg-6">
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Party</th>
-                        <th>Year</th>
-                        <th>Percentage</th>
-                        <th>Popular</th>
-                        <th>Electoral</th>
-                        <th>Polling</th>
+                        <th>StartYear</th>
+                        <th>EndYear</th>
                     </tr>
                     </thead>
                     <tr ng-repeat="x in resultsNCEQ">
                         <td>{{x.Name}}</td>
-                        <td>{{x.Party}}</td>
-                        <td>{{x.Year}}</td>
-                        <td>{{x.Percentage}}</td>
-                        <td>{{x.Popular}}</td>
-                        <td>{{x.Electoral}}</td>
-                        <td>{{x.Polling}}</td>
+                        <td>{{x.StartYear}}</td>
+                        <td>{{x.EndYear}}</td>
                     </tr>
                 </table>
             </div>
@@ -128,16 +119,16 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2>Swing Candidate Query</h2>
-                <input type="text" name="SCQYear" ng-model="SCQYear">
-                <button class="btn btn-default" ng-click="SCQ(SCQYear)">Query</button>
+                <button class="btn btn-default" ng-click="SCQ()">Query</button>
             </div>
             <div class="col-lg-6">
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Party</th>
+                        <th>Running Mate</th>
                         <th>Year</th>
+                        <th>Party</th>
                         <th>Percentage</th>
                         <th>Popular</th>
                         <th>Electoral</th>
@@ -146,8 +137,9 @@
                     </thead>
                     <tr ng-repeat="x in resultsSCQ">
                         <td>{{x.Name}}</td>
-                        <td>{{x.Party}}</td>
+                        <td>{{x.Running_Mate}}</td>
                         <td>{{x.Year}}</td>
+                        <td>{{x.Party}}</td>
                         <td>{{x.Percentage}}</td>
                         <td>{{x.Popular}}</td>
                         <td>{{x.Electoral}}</td>
@@ -160,30 +152,26 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2>Party Query</h2>
-                <input type="text" name="PQYear" ng-model="PQYear">
-                <button class="btn btn-default" ng-click="PQ(PQYear)">Query</button>
+                <input type="text" name="PQParty" ng-model="PQParty">
+                <button class="btn btn-default" ng-click="PQ(PQParty)">Query</button>
             </div>
             <div class="col-lg-6">
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>Name</th>
                         <th>Party</th>
                         <th>Year</th>
                         <th>Percentage</th>
                         <th>Popular</th>
                         <th>Electoral</th>
-                        <th>Polling</th>
                     </tr>
                     </thead>
                     <tr ng-repeat="x in resultsPQ">
-                        <td>{{x.Name}}</td>
                         <td>{{x.Party}}</td>
                         <td>{{x.Year}}</td>
                         <td>{{x.Percentage}}</td>
                         <td>{{x.Popular}}</td>
                         <td>{{x.Electoral}}</td>
-                        <td>{{x.Polling}}</td>
                     </tr>
                 </table>
             </div>
@@ -192,30 +180,28 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2>State Query</h2>
-                <input type="text" name="SQYear" ng-model="SQYear">
-                <button class="btn btn-default" ng-click="SQ(SQYear)">Query</button>
+                <input type="text" name="SQState" ng-model="SQState">
+                <button class="btn btn-default" ng-click="SQ(SQState)">Query</button>
             </div>
             <div class="col-lg-6">
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Party</th>
+                        <th>sName</th>
+                        <th>cName</th>
                         <th>Year</th>
                         <th>Percentage</th>
                         <th>Popular</th>
                         <th>Electoral</th>
-                        <th>Polling</th>
                     </tr>
                     </thead>
                     <tr ng-repeat="x in resultsSQ">
-                        <td>{{x.Name}}</td>
-                        <td>{{x.Party}}</td>
+                        <td>{{x.sName}}</td>
+                        <td>{{x.cName}}</td>
                         <td>{{x.Year}}</td>
                         <td>{{x.Percentage}}</td>
                         <td>{{x.Popular}}</td>
                         <td>{{x.Electoral}}</td>
-                        <td>{{x.Polling}}</td>
                     </tr>
                 </table>
             </div>

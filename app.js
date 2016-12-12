@@ -27,29 +27,29 @@ app.get('/CQ', function(req, res) {
 });
 
 app.get('/NCEQ', function(req, res) {
-    console.log('NCEQ: ' + req.query.year);
-    queries.NCEQ(req.query.year, function(data) {
+    console.log('NCEQ: ');
+    queries.NCEQ(function(data) {
         res.send(data);
     })
 });
 
 app.get('/SCQ', function(req, res) {
-    console.log('SCQ: ' + req.query.year);
-    queries.SCQ(req.query.year, function(data) {
+    console.log('SCQ: ');
+    queries.SCQ(function(data) {
         res.send(data);
     })
 });
 
 app.get('/PQ', function(req, res) {
-    console.log('PQ: ' + req.query.year);
-    queries.PQ(req.query.year, function(data) {
+    console.log('PQ: ' + req.query.party);
+    queries.PQ(req.query.party, function(data) {
         res.send(data);
     })
 });
 
 app.get('/SQ', function(req, res) {
-    console.log('SQ: ' + req.query.year);
-    queries.SQ(req.query.year, function(data) {
+    console.log('SQ: ' + req.query.state);
+    queries.SQ(req.query.state, function(data) {
         res.send(data);
     })
 });

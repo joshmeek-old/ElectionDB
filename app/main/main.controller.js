@@ -33,29 +33,29 @@ angular.module('ElectionDB')
             });
         };
 
-        $scope.NCEQ = function(year) {
-            mainRoute.NCEQ(year).then(function(data) {
+        $scope.NCEQ = function() {
+            mainRoute.NCEQ().then(function(data) {
                 $scope.resultsNCEQ = data.data;
                 console.log(data.data);
             });
         };
 
-        $scope.SCQ = function(year) {
-            mainRoute.SCQ(year).then(function(data) {
+        $scope.SCQ = function() {
+            mainRoute.SCQ().then(function(data) {
                 $scope.resultsSCQ = data.data;
                 console.log(data.data);
             });
         };
 
-        $scope.PQ = function(year) {
-            mainRoute.PQ(year).then(function(data) {
+        $scope.PQ = function(party) {
+            mainRoute.PQ(party).then(function(data) {
                 $scope.resultsPQ = data.data;
                 console.log(data.data);
             });
         };
 
-        $scope.SQ = function(year) {
-            mainRoute.SQ(year).then(function(data) {
+        $scope.SQ = function(state) {
+            mainRoute.SQ(state).then(function(data) {
                 $scope.resultsSQ = data.data;
                 console.log(data.data);
             });

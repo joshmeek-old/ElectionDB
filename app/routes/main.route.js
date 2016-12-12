@@ -31,12 +31,11 @@ app.factory('mainRoute', ['$http', function($http) {
         });
     }
 
-    function NCEQ(year) {
+    function NCEQ() {
         console.log("NCEQ Route");
         return $http({
             url: 'http://localhost:5674/NCEQ',
-            method: 'GET',
-            params: {year: year}
+            method: 'GET'
         }).success(function(data){
             return data;
         }).error(function(data, error){
@@ -44,12 +43,11 @@ app.factory('mainRoute', ['$http', function($http) {
         });
     }
 
-    function SCQ(year) {
+    function SCQ() {
         console.log("SCQ Route");
         return $http({
             url: 'http://localhost:5674/SCQ',
-            method: 'GET',
-            params: {year: year}
+            method: 'GET'
         }).success(function(data){
             return data;
         }).error(function(data, error){
@@ -57,12 +55,12 @@ app.factory('mainRoute', ['$http', function($http) {
         });
     }
 
-    function PQ(year) {
+    function PQ(party) {
         console.log("PQ Route");
         return $http({
             url: 'http://localhost:5674/PQ',
             method: 'GET',
-            params: {year: year}
+            params: {party: party}
         }).success(function(data){
             return data;
         }).error(function(data, error){
@@ -70,12 +68,12 @@ app.factory('mainRoute', ['$http', function($http) {
         });
     }
 
-    function SQ(year) {
+    function SQ(state) {
         console.log("SQ Route");
         return $http({
             url: 'http://localhost:5674/SQ',
             method: 'GET',
-            params: {year: year}
+            params: {state: state}
         }).success(function(data){
             return data;
         }).error(function(data, error){
@@ -128,7 +126,7 @@ app.factory('mainRoute', ['$http', function($http) {
         NCEQ: NCEQ,
         SCQ: SCQ,
         PQ: PQ,
-        SQ: SCQ,
+        SQ: SQ,
         FEQ: FEQ,
         NEQ: NEQ,
         PPQ: PPQ

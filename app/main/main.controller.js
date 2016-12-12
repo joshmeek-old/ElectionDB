@@ -10,9 +10,12 @@ angular.module('ElectionDB')
         $scope.resultsSCQ = {};
         $scope.resultsPQ = {};
         $scope.resultsSQ = {};
-        $scope.resultsFEQ = {};
+        $scope.resultsFEQ = '';
         $scope.resultsNEQ = {};
         $scope.resultsPPQ = '';
+        $scope.score = 0;
+        $scope.total = 0;
+        $scope.answer = '';
 
         $scope.EYQ = function(year) {
 
@@ -61,10 +64,20 @@ angular.module('ElectionDB')
             });
         };
 
-        $scope.FEQ = function() {
-            mainRoute.FEQ().then(function(data) {
-                $scope.resultsFEQ = data.data;
+        $scope.FEQ = function(pres, vp) {
+            mainRoute.FEQ(pres, vp).then(function(data) {
                 console.log(data.data);
+                if(data.data.length == 0) {
+                    $scope.answer = 'Incorrect';
+                    $scope.resultsFEQ = pres + " did not serve with " + vp;
+                    $scope.total += 1;
+                }
+                else {
+                    $scope.answer = 'Correct';
+                    $scope.resultsFEQ = pres + " served with " + vp;
+                    $scope.score += 1;
+                    $scope.total += 1;
+                }
             });
         };
 

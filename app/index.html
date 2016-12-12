@@ -187,8 +187,8 @@
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>sName</th>
-                        <th>cName</th>
+                        <th>State Name</th>
+                        <th>Candidate Name</th>
                         <th>Year</th>
                         <th>Percentage</th>
                         <th>Popular</th>
@@ -209,20 +209,26 @@
         <hr>
         <div class="row">
             <div class="col-lg-6">
-                <h2>VP Count Query</h2>
-                <button class="btn btn-default" ng-click="FEQ()">Query</button>
+                <h2>Served Together Trivia Query</h2>
+                President: <input type="text" name="FEQPresident" ng-model="FEQPresident">
+                served with Vice President: <input type="text" name="FEQVicePresident" ng-model="FEQVicePresident">
+                <button class="btn btn-default" ng-click="FEQ(FEQPresident, FEQVicePresident)">Query</button>
             </div>
             <div class="col-lg-6">
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>pName</th>
-                        <th>VPCount</th>
+                        <th>Answer</th>
+                        <th>Result</th>
+                        <th>Score</th>
+                        <th>Total</th>
                     </tr>
                     </thead>
-                    <tr ng-repeat="x in resultsFEQ">
-                        <td>{{x.pName}}</td>
-                        <td>{{x.VPCount}}</td>
+                    <tr>
+                        <td>{{answer}}</td>
+                        <td>{{resultsFEQ}}</td>
+                        <td>{{score}}</td>
+                        <td>{{total}}</td>
                     </tr>
                 </table>
             </div>

@@ -55,8 +55,8 @@ app.get('/SQ', function(req, res) {
 });
 
 app.get('/FEQ', function(req, res) {
-    console.log('FEQ: ');
-    queries.FEQ(function(data) {
+    console.log('FEQ: ' + req.query.pres + " " + req.query.vp);
+    queries.FEQ(req.query.pres, req.query.vp, function(data) {
         res.send(data);
     })
 });

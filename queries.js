@@ -62,9 +62,9 @@ function SQ(state, callback) {
 
 }
 
-function FEQ(callback) {
+function FEQ(pres, vp, callback) {
 
-    connection.query("select pName, count(*) as VPCount from VICE_PRESIDENT where vName != 'None' group by pName order by VPCount desc;", function(err, rows) {
+    connection.query('select * from VICE_PRESIDENT where pName = "' + pres + '" and vName = "' + vp + '";', function(err, rows) {
         if(err) throw err;
         callback(rows);
     });
@@ -120,8 +120,8 @@ module.exports = {
             callback(results);
         })
     },
-    FEQ: function(callback) {
-        FEQ(function(results) {
+    FEQ: function(pres, vp, callback) {
+        FEQ(pres, vp, function(results) {
             callback(results);
         })
     },

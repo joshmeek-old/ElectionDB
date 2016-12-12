@@ -81,11 +81,12 @@ app.factory('mainRoute', ['$http', function($http) {
         });
     }
 
-    function FEQ(year) {
+    function FEQ(pres, vp) {
         console.log("FEQ Route");
         return $http({
             url: 'http://localhost:5674/FEQ',
-            method: 'GET'
+            method: 'GET',
+            params: {pres: pres, vp: vp}
         }).success(function(data){
             return data;
         }).error(function(data, error){

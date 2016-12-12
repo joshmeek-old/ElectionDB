@@ -57,11 +57,16 @@ select *
 from PRESIDENT p, RUNNING_M;
 
 #Presidential Picture Query
-
+select distinct(Picture) 
+from PRESIDENT
+where Name = 'Andrew Jackson';
 
 #Non-elected Query
 select Name, StartYear 
 from PRESIDENT 
 where StartYear % 4 != 0;
 
-
+#Served Together Query
+select * 
+from VICE_PRESIDENT
+where pName = "John F. Kennedy" and vName = "Lyndon B. Johnson";

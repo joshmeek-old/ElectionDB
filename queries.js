@@ -18,7 +18,6 @@ function EYQ(year, callback) {
 }
 
 function CQ(name, callback) {
-
     connection.query('select c.Name, rm.rName as Running_Mate, c.Year, c.Party, c.Popular, c.Percentage, c.Electoral, c.Polling from CANDIDATE c, RUNNING_MATE rm where c.Name = "' + name + '" and rm.cName = "' + name + '" and c.Year = rm.StartYear;', function(err, rows) {
         if(err) throw err;
         callback(rows);

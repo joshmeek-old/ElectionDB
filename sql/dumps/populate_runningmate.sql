@@ -22,7 +22,7 @@ insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Walter M
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Ronald Reagan', 'George H.W. Bush', 1980, 1984);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Jimmy Carter', 'Walter Mondale', 1980, 1984);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Jimmy Carter', 'Walter Mondale', 1976, 1980);
-insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Gerald Ford', 'Bob Dole', 1976, 1980);
+insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Gerald R. Ford', 'Bob Dole', 1976, 1980);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Richard M. Nixon', 'Spiro Agnew', 1972, 1976);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('George McGovern', 'Sargent Shriver', 1972, 1976);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Richard M. Nixon', 'Spiro Agnew', 1968, 1972);
@@ -36,9 +36,9 @@ insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Dwight D
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Adlai Stevenson II', 'Estes Kefauver', 1956, 1960);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Dwight D. Eisenhower', 'Richard Nixon', 1952, 1956);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Adlai Stevenson II', 'John Sparkman', 1952, 1956);
-insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Harry S. Truman', 'Alben Barkley', 1948, 1952);
+insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Harry S Truman', 'Alben Barkley', 1948, 1952);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Thomas E. Dewey', 'Earl Warren', 1948, 1952);
-insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Franklin D. Roosevelt', 'Harry Truman', 1944, 1948);
+insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Franklin D. Roosevelt', 'Harry S Truman', 1944, 1948);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Thomas E. Dewey', 'John W. Bricker', 1944, 1948);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Franklin D. Roosevelt', 'Henry Wallace', 1940, 1944);
 insert into db.RUNNING_MATE (cName, rName, StartYear, EndYear) values ('Wendell Willkie', 'Charles L. McNary', 1940, 1944);

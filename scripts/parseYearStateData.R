@@ -1,6 +1,5 @@
 
 # Download 2016 data
-
 data_files <- list()
 early_years <- read.csv("~/Desktop/ElectionsDB_Data/Year_State/Year_1789-1820.csv")
 

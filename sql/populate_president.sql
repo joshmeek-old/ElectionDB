@@ -45,7 +45,8 @@ insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('HERBERT HO
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('FRANKLIN D. ROOSEVELT', 1932, 1936, 'FDR');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('FRANKLIN D. ROOSEVELT', 1936, 1940, 'FDR');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('FRANKLIN D. ROOSEVELT', 1940, 1944, 'FDR');
-insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('HARRY S TRUMAN', 1944, 1958, 'Truman');
+insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('FRANKLIN D. ROOSEVELT', 1944, 1945, 'FDR');
+insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('HARRY S TRUMAN', 1945, 1948, 'Truman');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('HARRY S TRUMAN', 1948, 1952, 'Truman');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('DWIGHT D. EISENHOWER', 1952, 1956, 'Eisenhower');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('DWIGHT D. EISENHOWER', 1956, 1960, 'Eisenhower');
@@ -54,7 +55,7 @@ insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('LYNDON B. 
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('LYNDON B. JOHNSON', 1964, 1968, 'LBJ');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('RICHARD M. NIXON', 1968, 1972, 'Nixon');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('RICHARD M. NIXON', 1972, 1974, 'Nixon');
-insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('GERALD FORD', 1974, 1976, 'Ford');
+insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('GERALD R. FORD', 1974, 1976, 'Ford');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('JIMMY CARTER', 1976, 1980, 'Carter');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('RONALD REAGAN', 1980, 1984, 'Reagan');
 insert into db.PRESIDENT (Name, StartYear, EndYear, Picture) values ('RONALD REAGAN', 1984, 1988, 'Reagan');
